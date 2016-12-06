@@ -26,10 +26,22 @@ System.register(["angular2/src/core/di/decorators", "angular2/src/http/http", 'r
             UserService = (function () {
                 function UserService(_http) {
                     this._http = _http;
-                    this.url = "http://jsonplaceholder.typicode.com";
+                    this.url = "http://jsonplaceholder.typicode.com/users";
                 }
                 UserService.prototype.getUsers = function () {
-                    return this._http.get("http://jsonplaceholder.typicode.com/users").map(function (res) { return res.json(); });
+                    return this._http.get(this.url).map(function (res) { return res.json(); });
+                };
+                UserService.prototype.getUser = function (id) {
+                    return this._http.get(this.url + "/" + id).map(function (res) { return res.json(); });
+                };
+                UserService.prototype.updateUser = function (user) {
+                    return this._http.put(this.url + "/" + user.id, user).map(function (res) { return res.json(); });
+                };
+                UserService.prototype.setUser = function (user) {
+                    return this._http.post(this.url, user).map(function (res) { return res.json(); });
+                };
+                UserService.prototype.removeUser = function (id) {
+                    return this._http.delete(this.url + "/" + id).map(function (res) { return res.json(); });
                 };
                 UserService = __decorate([
                     decorators_1.Injectable(), 

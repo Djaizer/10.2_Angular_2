@@ -26,7 +26,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 }
                 NgProjectComponent = __decorate([
                     core_1.Component({
-                        template: "\n<h1>NgProject (Home)</h1>\n\n"
+                        template: "\n<h1>NgProject (Home)</h1>\n<nav aria-label=\"...\">\n  <ul class=\"pagination\">\n   <li><a href=\"#\" aria-label=\"Next\"><span aria-hidden=\"true\">&laquo;</span></a></li>\n    <li class=\"active\"><a href=\"#\">1 <span class=\"sr-only\">(current)</span></a></li>\n    <li class=\"disabled\"><a href=\"#\">2 <span class=\"sr-only\">(current)</span></a></li>\n    <li class=\"disabled\"><a href=\"#\">3 <span class=\"sr-only\">(current)</span></a></li>\n    <li class=\"disabled\"><a href=\"#\">4 <span class=\"sr-only\">(current)</span></a></li>\n <li><a href=\"#\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>\n  </ul>\n</nav>\n"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NgProjectComponent);
